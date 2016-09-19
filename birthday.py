@@ -1,7 +1,7 @@
 """
 birthday.py
-Author: <your name here>
-Credit: <list sources used, if any>
+Author: Bauti G
+Credit: Vinzent and Liam S.
 Assignment:
 
 Your program will ask the user the following questions, in this order:
@@ -31,3 +31,63 @@ Example Session
   And the day? 11
   Eric, you are a fall baby of the stone age.
 """
+name=str(input("What is your name? "))
+month=str(input("What is the name of the month of the year you were born in? "))
+year=int(input("What year were  you born in?"))
+day=int(input("What day were you born in? "))
+
+from datetime import datetime
+from calendar import month_name
+todaymonth = datetime.today().month
+todaydate = datetime.today().day
+
+if month == "October" and day == 31:
+    print("You were born on Halloween!")
+
+if month == "January":
+    month = 1
+if month == "February":
+    month = 2
+if month == "March":
+    month = 3
+if month == "April":
+    month = 4
+if month == "May":
+    month = 5
+if month == "June":
+    month = 6
+if month == "July":
+    month = 7
+if month == "August":
+    month = 8
+if month == "September":
+    month = 9
+if month == "October":
+    month = 10
+if month == "November":
+    month = 11
+if month == "December":
+    month = 12
+    
+if month == todaymonth and todaydate == day:
+    print("Happy birthday!")
+    
+if year < 1980:
+    time="Stone Age"
+if year >= 1980 and year < 1990:
+    time="eighties"
+if year >= 1990 and year < 2000:
+    time="nineties"
+if year > 2000:
+    time="two thausands"
+
+if month == 12 or month == 1 or month == 2:
+    monthbaby="winter baby"
+if month == 3 or month == 4 or month == 5:
+    monthbaby="spring baby"
+if month == 6 or month == 7 or month == 8:
+    monthbaby="summer baby"
+if month == 9 or month == 10 or month == 11:
+    monthbaby="fall baby"
+
+print("{0}, you are a {1} of the {2}.".format(name, monthbaby, time))
