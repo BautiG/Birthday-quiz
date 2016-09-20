@@ -40,9 +40,10 @@ from datetime import datetime
 from calendar import month_name
 todaymonth = datetime.today().month
 todaydate = datetime.today().day
-
+exc = 0
 if month == "October" and day == 31:
     print("You were born on Halloween!")
+    exc = 1
 
 if month == "January":
     month = 1
@@ -71,6 +72,7 @@ if month == "December":
     
 if month == todaymonth and todaydate == day:
     print("Happy birthday!")
+    exc = 1
     
 if year < 1980:
     time="Stone Age"
@@ -80,14 +82,13 @@ if year >= 1990 and year < 2000:
     time="nineties"
 if year >= 2000:
     time="two thousands"
-
-if month == 12 or month == 1 or month == 2:
-    monthbaby="winter baby"
-if month == 3 or month == 4 or month == 5:
-    monthbaby="spring baby"
-if month == 6 or month == 7 or month == 8:
-    monthbaby="summer baby"
-if month == 9 or month == 10 or month == 11:
-    monthbaby="fall baby"
-
-print("{0}, you are a {1} of the {2}.".format(name, monthbaby, time))
+if exc == 0:
+    if month == 12 or month == 1 or month == 2:
+        monthbaby="winter baby"
+    if month == 3 or month == 4 or month == 5:
+        monthbaby="spring baby"
+    if month == 6 or month == 7 or month == 8:
+        monthbaby="summer baby"
+    if month == 9 or month == 10 or month == 11:
+        monthbaby="fall baby"
+    print("{0}, you are a {1} of the {2}.".format(name, monthbaby, time))
