@@ -78,7 +78,7 @@ if year >= 1980 and year < 1990:
     time="eighties"
 if year >= 1990 and year < 2000:
     time="nineties"
-if year > 2000:
+if year >= 2000:
     time="two thousands"
 
 if month == 12 or month == 1 or month == 2:
