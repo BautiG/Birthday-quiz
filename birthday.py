@@ -33,7 +33,7 @@ Example Session
 """
 name=str(input("What is your name? "))
 month=str(input("What is the name of the month of the year you were born in? "))
-year=int(input("What year were  you born in?"))
+year=int(input("What year were  you born in? "))
 day=int(input("What day were you born in? "))
 
 from datetime import datetime
@@ -79,7 +79,7 @@ if year >= 1980 and year < 1990:
 if year >= 1990 and year < 2000:
     time="nineties"
 if year > 2000:
-    time="two thausands"
+    time="two thousands"
 
 if month == 12 or month == 1 or month == 2:
     monthbaby="winter baby"
